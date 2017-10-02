@@ -1,4 +1,6 @@
 class TwilioController < ApplicationController
+  skip_before_filter :verify_authenticity_token
+  
   def twiml
     response = Twilio::TwiML::VoiceResponse.new
     response.play(url: site_url('/messages/1.mp3'))
@@ -7,7 +9,7 @@ class TwilioController < ApplicationController
   end
 
   def callback
-
+    render json: '{success: true}'
   end
 
   private
