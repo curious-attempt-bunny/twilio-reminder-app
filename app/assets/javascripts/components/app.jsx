@@ -30,7 +30,7 @@ class App extends React.Component {
             <span className="icon-bar"></span>
             <span className="icon-bar"></span>
           </button>
-          <a className="navbar-brand" href="/">dokku-rails-omniauth-bootstrap-react</a>
+          <a className="navbar-brand" href="/">twilio-reminder-app</a>
         </div>
         <div id="navbar" className="navbar-collapse collapse">
           { this.renderAuthButton() }
