@@ -1,4 +1,4 @@
-# dokku-rails-omniauth-bootstrap-react
+# twilio-reminder-app
 
 # Installation
 
@@ -6,18 +6,18 @@
 
 On your Dokku server:
 
-    dokku apps:create dokku-rails-omniauth-bootstrap-react
+    dokku apps:create twilio-reminder-app
     sudo dokku plugin:install https://github.com/dokku/dokku-postgres.git
-    dokku postgres:create dokku-rails-omniauth-bootstrap-react-database
-    dokku postgres:link dokku-rails-omniauth-bootstrap-react-database dokku-rails-omniauth-bootstrap-react
+    dokku postgres:create twilio-reminder-app-database
+    dokku postgres:link twilio-reminder-app-database twilio-reminder-app
 
 ## Push to Dokku
 
 On you local computer:
 
-    git clone git@github.com:curious-attempt-bunny/dokku-rails-omniauth-bootstrap-react.git
-    cd dokku-rails-omniauth-bootstrap-react
-    git remote add dokku dokku@yourhostontheinternet:dokku-rails-omniauth-bootstrap-react
+    git clone git@github.com:curious-attempt-bunny/twilio-reminder-app.git
+    cd twilio-reminder-app
+    git remote add dokku dokku@yourhostontheinternet:twilio-reminder-app
     git push dokku master
 
 ## Add HTTPS to your app
@@ -25,15 +25,15 @@ On you local computer:
 On your Dokku server:
 
     sudo dokku plugin:install https://github.com/dokku/dokku-letsencrypt.git
-    dokku config:set --no-restart dokku-rails-omniauth-bootstrap-react DOKKU_LETSENCRYPT_EMAIL=yourregistrationemail.com
-    dokku letsencrypt dokku-rails-omniauth-bootstrap-react
+    dokku config:set --no-restart twilio-reminder-app DOKKU_LETSENCRYPT_EMAIL=yourregistrationemail.com
+    dokku letsencrypt twilio-reminder-app
     dokku letsencrypt:cron-job --add    
 
 ## Add Google OAuth2 config to your add
 
 On your Dokku server:
     
-    dokku config:set dokku-rails-omniauth-bootstrap-react GOOGLE_CLIENT_ID=xxx GOOGLE_CLIENT_SECRET=yyy    
+    dokku config:set twilio-reminder-app GOOGLE_CLIENT_ID=xxx GOOGLE_CLIENT_SECRET=yyy    
 
 # Running locally
 
@@ -44,7 +44,7 @@ On your Dokku server:
 
 ## Add New Relic monitoring
 
-    dokku config:set dokku-rails-omniauth-bootstrap-react NEW_RELIC_LICENSE_KEY=xxx NEW_RELIC_APP_NAME=yyy
+    dokku config:set twilio-reminder-app NEW_RELIC_LICENSE_KEY=xxx NEW_RELIC_APP_NAME=yyy
 
 # Resources
 
