@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   resource :home, only: [:show]
 
   root to: "home#show"
+
+  get 'twilio/twiml', to: 'twilio#twiml'
+  get 'twilio/call', to: 'twilio#call'
+  get 'twilio/callback', to: 'twilio#callback'
 end

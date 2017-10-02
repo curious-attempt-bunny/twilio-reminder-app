@@ -55,3 +55,6 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+# Added at 2017-10-01 18:49:48 -0700 by home:
+gem "twilio-ruby", "~> 5.3"
